@@ -1,6 +1,6 @@
 package ee.reneroost;
 
-public class General {
+public class Util {
 
     public static void pauseSec(double sleepSeconds) {
         long sleepMillis = Math.round(sleepSeconds * 1000);

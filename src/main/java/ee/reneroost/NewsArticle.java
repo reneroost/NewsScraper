@@ -1,6 +1,5 @@
 package ee.reneroost;
 
-import java.net.URL;
 import java.time.LocalDateTime;
 
 public class NewsArticle {
@@ -8,14 +7,14 @@ public class NewsArticle {
     private String title;
     private String url;
     private LocalDateTime publishingDateTime;
-    private LocalDateTime scrapingdateTime;
+    private LocalDateTime scrapingDateTime;
     private int positionDuringScraping;
 
     public NewsArticle(String title, String url, LocalDateTime publishingDateTime, LocalDateTime scrapingdateTime, int positionDuringScraping) {
         this.title = title;
         this.url = url;
         this.publishingDateTime = publishingDateTime;
-        this.scrapingdateTime = scrapingdateTime;
+        this.scrapingDateTime = scrapingdateTime;
         this.positionDuringScraping = positionDuringScraping;
     }
 
@@ -48,12 +47,12 @@ public class NewsArticle {
         this.publishingDateTime = publishingDateTime;
     }
 
-    public LocalDateTime getScrapingdateTime() {
-        return scrapingdateTime;
+    public LocalDateTime getScrapingDateTime() {
+        return scrapingDateTime;
     }
 
-    public void setScrapingdateTime(LocalDateTime scrapingdateTime) {
-        this.scrapingdateTime = scrapingdateTime;
+    public void setScrapingDateTime(LocalDateTime scrapingDateTime) {
+        this.scrapingDateTime = scrapingDateTime;
     }
 
     public int getPositionDuringScraping() {
@@ -62,5 +61,13 @@ public class NewsArticle {
 
     public void setPositionDuringScraping(int positionDuringScraping) {
         this.positionDuringScraping = positionDuringScraping;
+    }
+
+    @Override
+    public String toString() {
+        return "NewsArticle{" +
+                "title='" + title + '\'' +
+                ", url='" + url + '\'' +
+                '}';
     }
 }
