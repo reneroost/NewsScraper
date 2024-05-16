@@ -2,7 +2,6 @@ package ee.reneroost.newslist.postimeesee;
 
 import ee.reneroost.Util;
 import ee.reneroost.model.NewsArticle;
-import ee.reneroost.newslist.delfiee.DelfiArticleExtraction;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

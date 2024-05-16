@@ -1,13 +1,9 @@
 package ee.reneroost.newslist.postimeesee;
 
 import ee.reneroost.model.NewsArticle;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -18,7 +14,7 @@ public class PostimeesArticleExtraction {
                 extractTitleFromWebElement(newsWebElement),
                 extractURLFromWebElement(newsWebElement),
                 extractPublishingDateTimeFromWebElement(newsWebElement),
-                extractScrapingDateTime(newsWebElement),
+                extractScrapingDateTime(),
                 rank
         );
     }
@@ -41,7 +37,7 @@ public class PostimeesArticleExtraction {
         return LocalDateTime.parse(publishingDate, formatter);
     }
 
-    private static LocalDateTime extractScrapingDateTime(WebElement newsWebElement) {
+    private static LocalDateTime extractScrapingDateTime() {
         return LocalDateTime.now();
     }
 

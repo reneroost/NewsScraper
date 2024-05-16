@@ -18,7 +18,7 @@ public class DelfiArticleExtraction {
                 extractTitleFromWebElement(newsWebElement),
                 extractURLFromWebElement(newsWebElement),
                 extractPublishingDateTimeFromWebElement(newsWebElement),
-                extractScrapingDateTime(newsWebElement),
+                extractScrapingDateTime(),
                 extractRankDuringScraping(newsWebElement)
         );
     }
@@ -48,7 +48,7 @@ public class DelfiArticleExtraction {
         return LocalDateTime.parse(publishingDate.text(), formatter);
     }
 
-    private static LocalDateTime extractScrapingDateTime(WebElement newsWebElement) {
+    private static LocalDateTime extractScrapingDateTime() {
         return LocalDateTime.now();
     }
 
