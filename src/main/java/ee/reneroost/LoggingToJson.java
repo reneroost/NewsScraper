@@ -2,16 +2,17 @@ package ee.reneroost;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import ee.reneroost.model.NewsArticle;
 
 import java.io.*;
 import java.time.LocalDate;
 import java.util.List;
 
-public class LogToJsonFile {
+public class LoggingToJson {
 
     public static final String SCRAPED_NEWS_FOLDER = "/home/rene/Documents/ScrapedNews/";
 
-    public static void loggingInJson(String newsSite, List<NewsArticle> newsArticles) {
+    public static void logToJsonFile(String newsSite, List<NewsArticle> newsArticles) {
         ObjectMapper objectMapper = new ObjectMapper();
         writeToFile(newsSite, "[");
         for (int i = 0; i < newsArticles.size(); i++) {
@@ -36,7 +37,7 @@ public class LogToJsonFile {
         try (
                 FileWriter fileWriter = new FileWriter(new File(folderName, fileName), true);
                 BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-                PrintWriter printWriter = new PrintWriter(bufferedWriter);
+                PrintWriter printWriter = new PrintWriter(bufferedWriter)
         ) {
             printWriter.println(newsArticle);
 

@@ -1,19 +1,18 @@
 package ee.reneroost;
 
-import ee.reneroost.delfiee.DelfiNewsList;
+import ee.reneroost.model.NewsArticle;
+import ee.reneroost.newslist.delfiee.DelfiNewsList;
+import ee.reneroost.newslist.postimeesee.PostimeesNewsList;
 
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
-        List<NewsArticle> newsArticles = DelfiNewsList.getNewsList();
-        for (NewsArticle newsArticle: newsArticles) {
-            System.out.println(newsArticle);
-        }
+        List<NewsArticle> newsArticlesPostimees = PostimeesNewsList.getNewsList();
+        List<NewsArticle> newsArticlesDelfi = DelfiNewsList.getNewsList();
 
-        LogToJsonFile.loggingInJson("Delfi", newsArticles);
-
+//        LoggingToJson.logToJsonFile("Delfi", newsArticlesDelfi);
 
     }
 }

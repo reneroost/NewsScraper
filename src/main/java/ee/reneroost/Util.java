@@ -6,18 +6,16 @@ public class Util {
         long sleepMillis = Math.round(sleepSeconds * 1000);
         try {
             Thread.sleep(sleepMillis);
-            System.out.println("sleep töötas.");
         } catch (InterruptedException e) {
-            throw new RuntimeException("sleep ei töötanud. " + e);
+            throw new RuntimeException("Sleep didn't work. " + e);
         }
     }
 
     public static void pauseMilliSec(int sleepMillis) {
         try {
             Thread.sleep(sleepMillis);
-            System.out.println("sleep töötas.");
         } catch (InterruptedException e) {
-            throw new RuntimeException("sleep ei töötanud. " + e);
+            throw new RuntimeException("Sleep didn't work. " + e);
         }
     }
 }

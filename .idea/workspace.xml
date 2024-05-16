@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7f71984-0379-46c8-aa4e-6806e1f0a642" name="Changes" comment="">
+    <list default="true" id="e7f71984-0379-46c8-aa4e-6806e1f0a642" name="Changes" comment="Shortened couple of methods by extracting new methods.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ee/reneroost/newslist/delfiee/DelfiArticleExtraction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ee/reneroost/newslist/delfiee/DelfiCookiesRejection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ee/reneroost/newslist/postimeesee/PostimeesArticleExtraction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ee/reneroost/newslist/postimeesee/PostimeesNewsList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ee/reneroost/General.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/reneroost/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ee/reneroost/LogsInJsonFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/reneroost/LogToJsonFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ee/reneroost/LogToJsonFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/reneroost/LoggingToJson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ee/reneroost/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/reneroost/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ee/reneroost/NewsArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/reneroost/NewsArticle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ee/reneroost/delfiee/DelfiCookiesReject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/reneroost/delfiee/DelfiCookiesReject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ee/reneroost/delfiee/DelfiGetNewsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/reneroost/delfiee/DelfiNewsList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ee/reneroost/NewsArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/reneroost/model/NewsArticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ee/reneroost/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/reneroost/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ee/reneroost/delfiee/DelfiCookiesReject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/reneroost/newslist/postimeesee/PostimeesCookiesRejection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ee/reneroost/delfiee/DelfiNewsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/reneroost/newslist/delfiee/DelfiNewsList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +29,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -29,6 +37,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;reneroost&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/reneroost/NewsScraper&quot;,
+    &quot;accountId&quot;: &quot;a6f09a99-c5f5-45a6-bea5-f671d3b27eed&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -53,6 +73,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
@@ -73,7 +94,7 @@
       <module name="NewsScraper" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ee.reneroost.*" />
+          <option name="PATTERN" value="ee.reneroost.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -87,13 +108,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.2-temurin-21.0.2-3183f394aec4-44d4b070" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -103,9 +117,42 @@
       <option name="presentableId" value="Default" />
       <updated>1709371164636</updated>
     </task>
+    <task id="LOCAL-00001" summary="Shortened couple of methods by extracting new methods.">
+      <option name="closed" value="true" />
+      <created>1712094257597</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712094257597</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Shortened couple of methods by extracting new methods." />
+    <option name="LAST_COMMIT_MESSAGE" value="Shortened couple of methods by extracting new methods." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ee/reneroost/newslist/postimeesee/PostimeesNewsList.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

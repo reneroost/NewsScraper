@@ -1,4 +1,4 @@
-package ee.reneroost.delfiee;
+package ee.reneroost.newslist.delfiee;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,16 +9,23 @@ import java.util.List;
 
 import static ee.reneroost.Util.pauseSec;
 
-public class DelfiCookiesReject {
+public class DelfiCookiesRejection {
 
     public static final String FIRST_BUTTON = "PRIVAATSUSSÄTTED";
     public static final String SECOND_BUTTON = "SALVESTA JA VÄLJU";
 
     public static void rejectCookies(WebDriver driver) {
+        removeFullscreenOverlayIfPresent(driver);
         clickButton(driver, FIRST_BUTTON);
         clickButton(driver, SECOND_BUTTON);
     }
 
+    private static void removeFullscreenOverlayIfPresent(WebDriver driver) {
+        pauseSec(1);
+        if (!driver.findElements(By.linkText("×")).isEmpty()) {
+            driver.findElement(By.linkText("×")).click();
+        }
+    }
 
     private static void clickButton(WebDriver driver, String buttonName) {
         WebElement buttonTarget = findButtonByName(driver, buttonName);
